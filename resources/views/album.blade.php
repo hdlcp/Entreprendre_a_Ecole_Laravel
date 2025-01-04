@@ -4,77 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSTI</title>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="style_000.css" rel="stylesheet">
+    <title>Gallerie</title>
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style_000.css') }}" rel="stylesheet">
 </head>
 <header class="d-flex align-items-center text-white py-2">
-    <!-- Logo de gauche -->
-    <div class="logo-container1 d-flex align-items-center justify-content-center bg-white me-3"
-        style="height: 73px; width: 73px;">
-        <img src="images/0 2.png" alt="Logo gauche" class="img-fluid">
-    </div>
+  <!-- Logo de gauche -->
+  <div class="logo-container1 d-flex align-items-center justify-content-center bg-white me-3"
+      style="height: 73px; width: 73px;">
+      <img src="{{ asset('images/0 2.png') }}" alt="Logo gauche" class="img-fluid">
+  </div>
 
-    <!-- Texte principal -->
-    <div class="text-container flex-grow-1">
-        <h1 class="m-0 fw-bold">INSTI</h1>
-        <p class="m-0">Institut Nationale Supérieur de Technologie Industrielle <br /> de Lokossa</p>
-    </div>
+  <!-- Texte principal -->
+  <div class="text-container flex-grow-1">
+      <h1 class="m-0 fw-bold">INSTI</h1>
+      <p class="m-0">Institut Nationale Supérieur de Technologie Industrielle <br /> de Lokossa</p>
+  </div>
 
-    <!-- Liens à droite -->
-    <div class="links d-flex align-items-center">
-        <a href="#" class="text-white d-flex align-items-center me-3">
-            <i class="bi bi-info-circle me-1" style="font-size: 20px;"></i> Accès rapide
-        </a>
-        <span class="text-white">|</span>
-        <a href="#" class="text-white d-flex align-items-center mx-3">
-            <i class="bi bi-snow3" style="font-size: 20px;"></i> Observatoire
-        </a>
-        <span class="text-white">|</span>
-        <a href="#" class="text-white d-flex align-items-center ms-3">
-            <i class="bi bi-person-fill" style="font-size: 20px;"></i> Nous écrire
-        </a>
-    </div>
+  <!-- Liens à droite -->
+  <div class="links d-flex align-items-center">
+    <a href="#" class="text-white d-flex align-items-center me-3">
+        <img src="{{ asset('icons/info-circle-fill.svg') }}" alt="Info" class="icon-white me-1" style="width: 20px; height: 20px;"
+            class="me-1"> Accès rapide
+    </a>
+    <span class="text-white">|</span>
+    <a href="#" class="text-white d-flex align-items-center mx-3">
+        <img src="{{ asset('icons/snow3.svg') }}" alt="Observatoire" class="icon-white me-1" style="width: 20px; height: 20px;"
+            class="me-1"> Observatoire
+    </a>
+    <span class="text-white">|</span>
+    <a href="#" class="text-white d-flex align-items-center ms-3">
+        <img src="{{ asset('icons/person-fill.svg') }}" alt="Person" class="icon-white me-1" style="width: 20px; height: 20px;"
+            class="me-1"> Nous écrire
+    </a>
+</div>
 
-    <!-- Logo de droite -->
-    <div class="logo-container1 d-flex align-items-center justify-content-center bg-white ms-3"
-        style="height: 73px; width: 73px;">
-        <img src="images/logoINSTI 1.png" alt="Logo droite" class="img-fluid">
-    </div>
+  <!-- Logo de droite -->
+  <div class="logo-container1 d-flex align-items-center justify-content-center bg-white ms-3"
+      style="height: 73px; width: 73px;">
+      <img src="{{ asset('images/logoINSTI 1.png') }}" alt="Logo droite" class="img-fluid">
+  </div>
 </header>
 <nav class="navbar navbar-expand-lg custom-navbar">
-    <div class="container">
-        <!-- Bouton de menu (mobile) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+  <div class="container">
+      <!-- Bouton de menu (mobile) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- Menu principal -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">ACCEUIL</a></li>
-                <li class="nav-item"><a class="nav-link" href="annonces_valide.html">ANNONCES</a></li>
-                <li class="nav-item"><a class="nav-link" href="Entreprise_Cree.html">ENTREPRISES CRÉÉES</a></li>
-                <!-- Logo central -->
-                <li class="nav-item logo-container">
-                    <a href="#">
-                        <img src="images/h pe.png" alt="Logo entreprise" class="img-fluid logo">
-                    </a>
-                </li>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="album.html">GALERIES</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html">PARTENAIRES</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">CONTACTS</a></li>
-            </ul>
-        </div>
-    </div>
+      <!-- Menu principal -->
+<div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+          <a class="nav-link" href="{{ route('home') }}">ACCEUIL</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{{ route('annonces') }}">ANNONCES</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{{ route('entreprises') }}">ENTREPRISES CRÉÉES</a>
+      </li>
+      <!-- Logo central -->
+      <li class="nav-item logo-container">
+          <a href="{{ route('home') }}">
+              <img src="{{ asset('images/h pe.png') }}" alt="Logo entreprise" class="img-fluid logo">
+          </a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{{ route('galeries') }}">GALERIES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('home') }}#partenaires">PARTENAIRES</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{{ route('contacts') }}">CONTACTS</a>
+      </li>
+  </ul>
+</div>
+
+  </div>
 </nav>
 <!-- Bannière -->
 <section class="gallery-header position-relative">
     <!-- Image de fond -->
     <div class="header-image">
-      <img src="images/DSC_0196 1.png" class="d-block w-100" alt="Galeries">
+      <img src="{{ asset('images/DSC_0196 1.png') }}" class="d-block w-100" alt="Galeries">
     </div>
     <!-- Texte superposé -->
     <div class="overlay">
@@ -96,9 +110,9 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <!-- Album 1 -->
       <div class="col">
-        <a href="sous-album.html" class="card-link">
+        <a href="{{ route('sous_album') }}" class="card-link">
           <div class="card border-0">
-            <img src="images/imgAlbum.png" alt="Album 1" class="card-img-top album-image">
+            <img src="{{ asset('images/imgAlbum.png') }}" alt="Album 1" class="card-img-top album-image">
             <div class="card-body">
               <p class="album-description">Galerie photos de l’entreprise EduTech Solutions</p>
             </div>
@@ -108,9 +122,9 @@
       
       <!-- Album 2 -->
       <div class="col">
-        <a href="sous-album.html" class="card-link">
+        <a href="{{ route('sous_album') }}" class="card-link">
           <div class="card border-0">
-            <img src="images/imgAlbum.png" alt="Album 2" class="card-img-top album-image">
+            <img src="{{ asset('images/imgAlbum.png') }}" alt="Album 2" class="card-img-top album-image">
             <div class="card-body">
               <p class="album-description">Galerie photos de l’entreprise AgroGreen</p>
             </div>
@@ -120,9 +134,9 @@
       
       <!-- Album 3 -->
       <div class="col">
-        <a href="sous-album.html" class="card-link">
+        <a href="{{ route('sous_album') }}" class="card-link">
           <div class="card border-0">
-            <img src="images/imgAlbum.png" alt="Album 3" class="card-img-top album-image">
+            <img src="{{ asset('images/imgAlbum.png') }}" alt="Album 3" class="card-img-top album-image">
             <div class="card-body">
               <p class="album-description">Galerie photos de l’entreprise AppDev229</p>
             </div>
@@ -132,9 +146,9 @@
       
       <!-- Album 4 -->
       <div class="col">
-        <a href="sous-album.html" class="card-link">
+        <a href="{{ route('sous_album') }}" class="card-link">
           <div class="card border-0">
-            <img src="images/imgAlbum.png" alt="Album 4" class="card-img-top album-image">
+            <img src="{{ asset('images/imgAlbum.png') }}" alt="Album 4" class="card-img-top album-image">
             <div class="card-body">
               <p class="album-description">Événements et Activités</p>
             </div>
@@ -144,9 +158,9 @@
       
       <!-- Album 5 -->
       <div class="col">
-        <a href="sous-album.html" class="card-link">
+        <a href="{{ route('sous_album') }}" class="card-link">
           <div class="card border-0">
-            <img src="images/imgAlbum.png" alt="Album 5" class="card-img-top album-image">
+            <img src="{{ asset('images/imgAlbum.png') }}" alt="Album 5" class="card-img-top album-image">
             <div class="card-body">
               <p class="album-description">Partenariats</p>
             </div>
@@ -156,9 +170,9 @@
       
       <!-- Album 6 -->
       <div class="col">
-        <a href="sous-album.html" class="card-link">
+        <a href="{{ route('sous_album') }}" class="card-link">
           <div class="card border-0">
-            <img src="images/imgAlbum.png" alt="Album 6" class="card-img-top album-image">
+            <img src="{{ asset('images/imgAlbum.png') }}" alt="Album 6" class="card-img-top album-image">
             <div class="card-body">
               <p class="album-description">Programme en Action</p>
             </div>
@@ -177,7 +191,7 @@
     <div class="row">
       <!-- Logo et Informations -->
       <div class="col-md-4">
-        <img src="icons/logoINSTI 1.png" alt="Logo" class="mb-3" style="width: 80px;"> 
+        <img src="{{ asset('icons/logoINSTI 1.png') }}" alt="Logo" class="mb-3" style="width: 80px;"> 
         <p class="mb-0">Lokossa, Agnivedji</p>
         <p><strong>(+229) 22 41 13 66</strong></p>
         <p>"Science et technologie au service de l'homme"</p>
@@ -185,11 +199,11 @@
         <div class="mt-3">
           <!-- Icône Facebook -->
           <a href="https://facebook.com" target="_blank" class="text-white me-3">
-            <img src="icons/facebook.svg" alt="Facebook" class="icon-white me-1" style="width: 40px; height: 40px;">
+            <img src="{{ asset('icons/facebook.svg') }}" alt="Facebook" class="icon-white me-1" style="width: 40px; height: 40px;">
           </a>
           <!-- Icône YouTube -->
           <a href="https://youtube.com" target="_blank" class="text-white me-3">
-            <img src="icons/youtube.svg" alt="YouTube" class="icon-white me-1" style="width: 40px; height: 40px;">
+            <img src="{{ asset('icons/youtube.svg') }}" alt="YouTube" class="icon-white me-1" style="width: 40px; height: 40px;">
           </a>
         </div>
         <div class="underline mt-2"></div>

@@ -5,77 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INSTI</title>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style_000.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style_000.css') }}" rel="stylesheet">
 </head>
 <header class="d-flex align-items-center text-white py-2">
     <!-- Logo de gauche -->
     <div class="logo-container1 d-flex align-items-center justify-content-center bg-white me-3"
         style="height: 73px; width: 73px;">
-        <img src="images/0 2.png" alt="Logo gauche" class="img-fluid">
+        <img src="{{ asset('images/0 2.png') }}" alt="Logo gauche" class="img-fluid">
     </div>
-
+  
     <!-- Texte principal -->
     <div class="text-container flex-grow-1">
         <h1 class="m-0 fw-bold">INSTI</h1>
         <p class="m-0">Institut Nationale Supérieur de Technologie Industrielle <br /> de Lokossa</p>
     </div>
-
+  
     <!-- Liens à droite -->
     <div class="links d-flex align-items-center">
-        <a href="#" class="text-white d-flex align-items-center me-3">
-            <i class="bi bi-info-circle me-1" style="font-size: 20px;"></i> Accès rapide
-        </a>
-        <span class="text-white">|</span>
-        <a href="#" class="text-white d-flex align-items-center mx-3">
-            <i class="bi bi-snow3" style="font-size: 20px;"></i> Observatoire
-        </a>
-        <span class="text-white">|</span>
-        <a href="#" class="text-white d-flex align-items-center ms-3">
-            <i class="bi bi-person-fill" style="font-size: 20px;"></i> Nous écrire
-        </a>
-    </div>
-
+      <a href="#" class="text-white d-flex align-items-center me-3">
+          <img src="{{ asset('icons/info-circle-fill.svg') }}" alt="Info" class="icon-white me-1" style="width: 20px; height: 20px;"
+              class="me-1"> Accès rapide
+      </a>
+      <span class="text-white">|</span>
+      <a href="#" class="text-white d-flex align-items-center mx-3">
+          <img src="{{ asset('icons/snow3.svg') }}" alt="Observatoire" class="icon-white me-1" style="width: 20px; height: 20px;"
+              class="me-1"> Observatoire
+      </a>
+      <span class="text-white">|</span>
+      <a href="#" class="text-white d-flex align-items-center ms-3">
+          <img src="{{ asset('icons/person-fill.svg') }}" alt="Person" class="icon-white me-1" style="width: 20px; height: 20px;"
+              class="me-1"> Nous écrire
+      </a>
+  </div>
+  
     <!-- Logo de droite -->
     <div class="logo-container1 d-flex align-items-center justify-content-center bg-white ms-3"
         style="height: 73px; width: 73px;">
-        <img src="images/logoINSTI 1.png" alt="Logo droite" class="img-fluid">
+        <img src="{{ asset('images/logoINSTI 1.png') }}" alt="Logo droite" class="img-fluid">
     </div>
-</header>
-<nav class="navbar navbar-expand-lg custom-navbar">
+  </header>
+  <nav class="navbar navbar-expand-lg custom-navbar">
     <div class="container">
         <!-- Bouton de menu (mobile) -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+  
         <!-- Menu principal -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">ACCEUIL</a></li>
-                <li class="nav-item"><a class="nav-link" href="annonces_valide.html">ANNONCES</a></li>
-                <li class="nav-item"><a class="nav-link" href="Entreprise_Cree.html">ENTREPRISES CRÉÉES</a></li>
-                <!-- Logo central -->
-                <li class="nav-item logo-container">
-                    <a href="#">
-                        <img src="images/h pe.png" alt="Logo entreprise" class="img-fluid logo">
-                    </a>
-                </li>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="album.html">GALERIES</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html">PARTENAIRES</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">CONTACTS</a></li>
-            </ul>
-        </div>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('home') }}">ACCEUIL</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('annonces') }}">ANNONCES</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('entreprises') }}">ENTREPRISES CRÉÉES</a>
+        </li>
+        <!-- Logo central -->
+        <li class="nav-item logo-container">
+            <a href="{{ route('home') }}">
+                <img src="{{ asset('images/h pe.png') }}" alt="Logo entreprise" class="img-fluid logo">
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('galeries') }}">GALERIES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('home') }}#partenaires">PARTENAIRES</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('contacts') }}">CONTACTS</a>
+        </li>
+    </ul>
+  </div>
+  
     </div>
-</nav>
+  </nav>
   <div class="container my-5">
     <div class="albums-header">
         <h2 class="album-title">LES SOUS - ALBUMS</h2>
         <div class="divider flex-grow-1"></div>
         <p class="sousalbum-description">Galerie photos de l’entreprise EduTech Solutions</p>
         <div class="subalbum-toggle">
-            <img src="icons/fleche_album.svg" alt="Flèche" class="arrow-icon">
+            <img src="{{ asset('icons/fleche_album.svg') }}" alt="Flèche" class="arrow-icon">
           <span class="subalbum-text">Développement des Solutions Numériques</span>
         </div>
       </div>
@@ -84,49 +99,49 @@
         <!-- photo 1 -->
         <div class="col">
             <div class="card border-0">
-                <img src="images/imgAlbum.png" alt="Album 1" class="card-img-top album-image">
+                <img src="{{ asset('images/imgAlbum.png') }}" alt="Album 1" class="card-img-top album-image">
             </div>
         </div>
         <!-- photo 2 -->
         <div class="col">
             <div class="card border-0">
-                <img src="images/imgAlbum.png" alt="Album 2" class="card-img-top album-image">
+                <img src="{{ asset('images/imgAlbum.png') }}" alt="Album 2" class="card-img-top album-image">
             </div>
         </div>
         <!-- photo 3 -->
         <div class="col">
             <div class="card border-0">
-                <img src="images/imgAlbum.png" alt="Album 3" class="card-img-top album-image">
+                <img src="{{ asset('images/imgAlbum.png') }}" alt="Album 3" class="card-img-top album-image">
             </div>
         </div>
         <!-- photo 4 -->
         <div class="col">
             <div class="card border-0">
-                <img src="images/imgAlbum.png" alt="Album 4" class="card-img-top album-image">
+                <img src="{{ asset('images/imgAlbum.png') }}" alt="Album 4" class="card-img-top album-image">
             </div>
         </div>
         <!-- photo 5 -->
         <div class="col">
             <div class="card border-0">
-                <img src="images/imgAlbum.png" alt="Album 5" class="card-img-top album-image">
+                <img src="{{ asset('images/imgAlbum.png') }}" alt="Album 5" class="card-img-top album-image">
             </div>
         </div>
         <!-- photo 5 -->
         <div class="col">
             <div class="card border-0">
-                <img src="images/imgAlbum.png" alt="Album 5" class="card-img-top album-image">
+                <img src="{{ asset('images/imgAlbum.png') }}" alt="Album 5" class="card-img-top album-image">
             </div>
         </div>
         <!-- photo 5 -->
         <div class="col">
             <div class="card border-0">
-                <img src="images/imgAlbum.png" alt="Album 5" class="card-img-top album-image">
+                <img src="{{ asset('images/imgAlbum.png') }}" alt="Album 5" class="card-img-top album-image">
             </div>
         </div>
     </div>
 
     <div class="return">
-        <a href="album.html" class="back-button">← Retour</a>
+        <a href="{{ route('sous_album') }}" class="back-button">← Retour</a>
     </div>
 </div>
 
@@ -138,7 +153,7 @@
       <div class="row">
         <!-- Logo et Informations -->
         <div class="col-md-4">
-          <img src="icons/logoINSTI 1.png" alt="Logo" class="mb-3" style="width: 80px;"> 
+          <img src="{{ asset('icons/logoINSTI 1.png') }}" alt="Logo" class="mb-3" style="width: 80px;"> 
           <p class="mb-0">Lokossa, Agnivedji</p>
           <p><strong>(+229) 22 41 13 66</strong></p>
           <p>"Science et technologie au service de l'homme"</p>
@@ -146,11 +161,11 @@
           <div class="mt-3">
             <!-- Icône Facebook -->
             <a href="https://facebook.com" target="_blank" class="text-white me-3">
-              <img src="icons/facebook.svg" alt="Facebook" class="icon-white me-1" style="width: 40px; height: 40px;">
+              <img src="{{ asset('icons/facebook.svg') }}" alt="Facebook" class="icon-white me-1" style="width: 40px; height: 40px;">
             </a>
             <!-- Icône YouTube -->
             <a href="https://youtube.com" target="_blank" class="text-white me-3">
-              <img src="icons/youtube.svg" alt="YouTube" class="icon-white me-1" style="width: 40px; height: 40px;">
+              <img src="{{ asset('icons/youtube.svg') }}" alt="YouTube" class="icon-white me-1" style="width: 40px; height: 40px;">
             </a>
           </div>
           <div class="underline mt-2"></div>

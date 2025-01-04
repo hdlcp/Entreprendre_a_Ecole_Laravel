@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSTI</title>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="resources/css/style_index.css" rel="stylesheet">
-    <link href="resources/css/styles_index.css" rel="stylesheet">
+    <title>Acceuil</title>
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style_index.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styles_index.css') }}" rel="stylesheet">
 </head>
 
 <header class="d-flex align-items-center text-white py-2">
   <!-- Logo de gauche -->
   <div class="logo-container1 d-flex align-items-center justify-content-center bg-white me-3"
       style="height: 73px; width: 73px;">
-      <img src="public/images/0 2.png" alt="Logo gauche" class="img-fluid">
+      <img src="{{ asset('images/0 2.png') }}" alt="Logo gauche" class="img-fluid">
   </div>
 
   <!-- Texte principal -->
@@ -25,23 +25,26 @@
 
   <!-- Liens à droite -->
   <div class="links d-flex align-items-center">
-      <a href="#" class="text-white d-flex align-items-center me-3">
-          <i class="bi bi-info-circle me-1" style="font-size: 20px;"></i> Accès rapide
-      </a>
-      <span class="text-white">|</span>
-      <a href="#" class="text-white d-flex align-items-center mx-3">
-          <i class="bi bi-snow3" style="font-size: 20px;"></i> Observatoire
-      </a>
-      <span class="text-white">|</span>
-      <a href="#" class="text-white d-flex align-items-center ms-3">
-          <i class="bi bi-person-fill" style="font-size: 20px;"></i> Nous écrire
-      </a>
-  </div>
+    <a href="#" class="text-white d-flex align-items-center me-3">
+        <img src="{{ asset('icons/info-circle-fill.svg') }}" alt="Info" class="icon-white me-1" style="width: 20px; height: 20px;"
+            class="me-1"> Accès rapide
+    </a>
+    <span class="text-white">|</span>
+    <a href="#" class="text-white d-flex align-items-center mx-3">
+        <img src="{{ asset('icons/snow3.svg') }}" alt="Observatoire" class="icon-white me-1" style="width: 20px; height: 20px;"
+            class="me-1"> Observatoire
+    </a>
+    <span class="text-white">|</span>
+    <a href="#" class="text-white d-flex align-items-center ms-3">
+        <img src="{{ asset('icons/person-fill.svg') }}" alt="Person" class="icon-white me-1" style="width: 20px; height: 20px;"
+            class="me-1"> Nous écrire
+    </a>
+</div>
 
   <!-- Logo de droite -->
   <div class="logo-container1 d-flex align-items-center justify-content-center bg-white ms-3"
       style="height: 73px; width: 73px;">
-      <img src="public/images/logoINSTI 1.png" alt="Logo droite" class="img-fluid">
+      <img src="{{ asset('images/logoINSTI 1.png') }}" alt="Logo droite" class="img-fluid">
   </div>
 </header>
 <nav class="navbar navbar-expand-lg custom-navbar">
@@ -52,23 +55,35 @@
       </button>
 
       <!-- Menu principal -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-              <li class="nav-item"><a class="nav-link" href="welcome.blade.php">ACCEUIL</a></li>
-              <li class="nav-item"><a class="nav-link" href="annonces_valide.blade.php">ANNONCES</a></li>
-              <li class="nav-item"><a class="nav-link" href="entreprisecree_LirePlus.blade.php">ENTREPRISES CRÉÉES</a></li>
-              <!-- Logo central -->
-              <li class="nav-item logo-container">
-                  <a href="#">
-                      <img src="public/images/h pe.png" alt="Logo entreprise" class="img-fluid logo">
-                  </a>
-              </li>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="album.blade.php">GALERIES</a></li>
-              <li class="nav-item"><a class="nav-link" href="index.blade.php">PARTENAIRES</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.blade.php">CONTACTS</a></li>
-          </ul>
-      </div>
+<div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+          <a class="nav-link" href="{{ route('home') }}">ACCEUIL</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{{ route('annonces') }}">ANNONCES</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{{ route('entreprises') }}">ENTREPRISES CRÉÉES</a>
+      </li>
+      <!-- Logo central -->
+      <li class="nav-item logo-container">
+          <a href="{{ route('home') }}">
+              <img src="{{ asset('images/h pe.png') }}" alt="Logo entreprise" class="img-fluid logo">
+          </a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{{ route('galeries') }}">GALERIES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('home') }}#partenaires">PARTENAIRES</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{{ route('contacts') }}">CONTACTS</a>
+      </li>
+  </ul>
+</div>
+
   </div>
 </nav>
 
@@ -77,7 +92,7 @@
   <div class="carousel">
     <!-- Slide 1 -->
     <div class="carousel-slide active">
-      <img src="public/images/banner1.jpeg" alt="Banner 1">
+      <img src="{{ asset('images/banner1.jpeg') }}" alt="Banner 1">
       <div class="banner-content">
         <h1>Découvrez comment l'INSTI prépare la nouvelle génération d’entrepreneurs 
           grâce à une formation pratique, axée sur les compétences et l'innovation.</h1>
@@ -85,14 +100,14 @@
     </div>
     <!-- Slide 2 -->
     <div class="carousel-slide">
-      <img src="public/images/banner2.jpeg" alt="Banner 2">
+      <img src="{{ asset('images/banner2.jpeg') }}" alt="Banner 2">
       <div class="banner-content">
         <h1>Une éducation axée sur l'innovation.</h1>
       </div>
     </div>
     <!-- Slide 3 -->
     <div class="carousel-slide">
-      <img src="public/images/banner3.jpeg" alt="Banner 3">
+      <img src="{{ asset('images/banner3.jpeg') }}" alt="Banner 3">
       <div class="banner-content">
         <h1>Rejoignez-nous pour transformer des idées en réalité.</h1>
       </div>
@@ -103,7 +118,7 @@
   </div>
 </section>
 
-<script src="script_index.js" defer></script>
+<script src="{{ asset('js/script_index.js') }}" defer></script>
    
   
 
@@ -112,7 +127,7 @@
   <div class="presentation-container">
     <!-- Image de l'étudiante -->
     <div class="presentation-image">
-      <img src="images/etudiante.png" alt="Étudiante" />
+      <img src="{{ asset('images/etudiante.png') }}" alt="Étudiante" />
     </div>
     <!-- Texte de présentation -->
     <div class="presentation-content">
@@ -127,11 +142,11 @@
       <div class="presentation-buttons">
         <a href="#" class="btn-primary">
           Lire plus
-          <img src="images/arrow-icon.svg" alt="Flèche" class="btn-icon">
+          <img src="{{ asset('images/arrow-icon.svg') }}" alt="Flèche" class="btn-icon">
         </a>
         <a href="#" class="btn-primary">
           Voir l'INSTI
-          <img src="images/globe-icon.svg" alt="Globe" class="btn-icon">
+          <img src="{{ asset('images/globe-icon.svg') }}" alt="Globe" class="btn-icon">
         </a>
       </div>
     </div>
@@ -144,7 +159,7 @@
     <div class="stats-content">
         <!-- Bloc gauche : Image + texte -->
         <div class="stats-left">
-            <img src="images/team-meeting.png" alt="Équipe en réunion" class="stats-image">
+            <img src="{{ asset('images/team-meeting.png') }}" alt="Équipe en réunion" class="stats-image">
             <h2 class="stats-title">NOS STATISTIQUE</h2>
             <p class="stats-description">
                 Grâce à l’appui de nos partenaires, le Programme Entreprendre à l’École a permis de former 
@@ -159,21 +174,21 @@
             <!-- Première colonne -->
             <div class="stats-column">
                 <div class="stat-item">
-                    <img src="public/images/startups.svg" alt="Startups créées" class="stat-icon">
+                    <img src="{{ asset('images/startups.svg') }}" alt="Startups créées" class="stat-icon">
                     <div class="stat-info">
                         <h3 class="stat-number">4</h3>
                         <p class="stat-text">NOMBRE DE<br>STARTUPS<br>CRÉÉES</p>
                     </div>
                 </div>
                 <div class="stat-item">
-                    <img src="public/images/students.svg" alt="Étudiants formés" class="stat-icon">
+                    <img src="{{ asset('images/students.svg') }}" alt="Étudiants formés" class="stat-icon">
                     <div class="stat-info">
                         <h3 class="stat-number">20</h3>
                         <p class="stat-text">ÉTUDIANTS<br>FORMÉS</p>
                     </div>
                 </div>
                 <div class="stat-item">
-                    <img src="public/images/projects.svg" alt="Projets développés" class="stat-icon">
+                    <img src="{{ asset('images/projects.svg') }}" alt="Projets développés" class="stat-icon">
                     <div class="stat-info">
                         <h3 class="stat-number">35+</h3>
                         <p class="stat-text">PROJETS<br>DÉVELOPPÉS</p>
@@ -184,14 +199,14 @@
             <!-- Deuxième colonne -->
             <div class="stats-column">
                 <div class="stat-item">
-                    <img src="public/images/employment.svg" alt="Taux d’emploi" class="stat-icon">
+                    <img src="{{ asset('images/employment.svg') }}" alt="Taux d’emploi" class="stat-icon">
                     <div class="stat-info">
                         <h3 class="stat-number">80%</h3>
                         <p class="stat-text">TAUX D’EMPLOI ET<br>D’AUTO-EMPLOI</p>
                     </div>
                 </div>
                 <div class="stat-item">
-                    <img src="public/images/partners.svg" alt="Partenariats" class="stat-icon">
+                    <img src="{{ asset('images/partners.svg') }}" alt="Partenariats" class="stat-icon">
                     <div class="stat-info">
                         <h3 class="stat-number">10</h3>
                         <p class="stat-text">PARTENARIATS</p>
@@ -212,19 +227,19 @@
       <div class="news-cards">
           <!-- Premier bloc (50%) -->
           <div class="news-card large">
-              <img src="public/images/news1.png" alt="Lancement d'AppDev229" class="news-image">
+              <img src="{{ asset('images/news1.png') }}" alt="Lancement d'AppDev229" class="news-image">
               <div class="news-overlay">
                   <div class="news-content">
                       <h3 class="news-title">Lancement d’AppDev229</h3>
                       <p class="news-description">Une startup spécialisée en développement d’applications.</p>
                       <div class="news-footer">
                           <span class="news-date">
-                              <img src="public/images/calendar-icon1.svg" alt="Calendar icon" class="news-icon-calendar">
+                              <img src="{{ asset('images/calendar-icon1.svg') }}" alt="Calendar icon" class="news-icon-calendar">
                               <strong>17 Mars 2022</strong>
                           </span>
-                          <a href="annonces_plus.blade.php" class="news-button">
+                          <a href="{{ route('annonces_plus') }}" class="news-button">
                               Lire plus
-                              <img src="public/public/images/eye-icon.svg" alt="Eye icon" class="news-icon-eye">
+                              <img src="{{ asset('images/eye-icon.svg') }}" alt="Eye icon" class="news-icon-eye">
                           </a>
                       </div>
                   </div>
@@ -233,18 +248,18 @@
 
           <!-- Deuxième bloc (25%) -->
           <div class="news-card small">
-              <img src="public/images/news2.png" alt="Événement 2" class="news-image">
+              <img src="{{ asset('images/news2.png') }}" alt="Événement 2" class="news-image">
               <div class="news-content">
                   <h3 class="news-title">Lancement d’AppDev229</h3>
                   <p class="news-description">Une startup spécialisée en développement d’applications.</p>
                   <div class="news-footter">
                       <span class="news-date">
-                          <img src="public/images/calendar-icon.svg" alt="Calendar icon" class="news-icon-calendar">
+                          <img src="{{ asset('images/calendar-icon.svg') }}" alt="Calendar icon" class="news-icon-calendar">
                           <strong>17 Mars 2022</strong>
                       </span>
-                      <a href="annonces_plus.blade.php" class="news-button">
+                      <a href="{{ route('annonces_plus') }}" class="news-button">
                           Lire plus
-                          <img src="public/images/eye-icon.svg" alt="Eye icon" class="news-icon-eye">
+                          <img src="{{ asset('images/eye-icon.svg') }}" alt="Eye icon" class="news-icon-eye">
                       </a>
                   </div>
               </div>
@@ -252,18 +267,18 @@
 
           <!-- Troisième bloc (25%) -->
           <div class="news-card small">
-              <img src="public/images/news3.png" alt="Événement 3" class="news-image">
+              <img src="{{ asset('images/news3.png') }}" alt="Événement 3" class="news-image">
               <div class="news-content">
                   <h3 class="news-title">Lancement d’AppDev229</h3>
                   <p class="news-description">Une startup spécialisée en développement d’applications.</p>
                   <div class="news-footer">
                       <span class="news-date">
-                          <img src="public/images/calendar-icon.svg" alt="Calendar icon" class="news-icon-calendar">
+                          <img src="{{ asset('images/calendar-icon.svg') }}" alt="Calendar icon" class="news-icon-calendar">
                           <strong>17 Mars 2022</strong>
                       </span>
-                      <a href="annonces_plus.blade.php" class="news-button">
+                      <a href="{{ route('annonces_plus') }}" class="news-button">
                           Lire plus
-                          <img src="public/images/eye-icon.svg" alt="Eye icon" class="news-icon-eye">
+                          <img src="{{ asset('images/eye-icon.svg') }}" alt="Eye icon" class="news-icon-eye">
                       </a>
                   </div>
               </div>
@@ -275,15 +290,15 @@
 
     <!-- Partenaires -->
 
-    <div class="partners-section">
+    <div id="partenaires" class="partners-section">
       <h1><strong>Partenaires Associés</strong></h1>
       <div class="under1"></div>
       <div class="carousel1">
           <button class="prev-btn">❮</button>
           <div class="carousel-images">
-            <img src="public/images/UNSTIM.png" alt="UNSTIM">
-            <img src="public/images/SONEB.png" alt="SONEB">
-            <img src="public/images/GEL.png" alt="Guichet d'Économie Locale">
+            <img src="{{ asset('images/UNSTIM.png') }}" alt="UNSTIM">
+            <img src="{{ asset('images/SONEB.png') }}" alt="SONEB">
+            <img src="{{ asset('images/GEL.png') }}" alt="Guichet d'Économie Locale">
           </div>
           <button class="next-btn">❯</button>
       </div>
@@ -296,7 +311,7 @@
       <div class="row">
         <!-- Logo et Informations -->
         <div class="col-md-4">
-          <img src="public/icons/logoINSTI 1.png" alt="Logo" class="mb-3" style="width: 80px;"> 
+          <img src="{{ asset('icons/logoINSTI 1.png') }}" alt="Logo" class="mb-3" style="width: 80px;"> 
           <p class="mb-0">Lokossa, Agnivedji</p>
           <p><strong>(+229) 22 41 13 66</strong></p>
           <p>"Science et technologie au service de l'homme"</p>
@@ -304,11 +319,11 @@
           <div class="mt-3">
             <!-- Icône Facebook -->
             <a href="https://facebook.com" target="_blank" class="text-white me-3">
-              <img src="public/icons/facebook.svg" alt="Facebook" class="icon-white me-1" style="width: 40px; height: 40px;">
+              <img src="{{ asset('icons/facebook.svg') }}" alt="Facebook" class="icon-white me-1" style="width: 40px; height: 40px;">
             </a>
             <!-- Icône YouTube -->
             <a href="https://youtube.com" target="_blank" class="text-white me-3">
-              <img src="public/icons/youtube.svg" alt="YouTube" class="icon-white me-1" style="width: 40px; height: 40px;">
+              <img src="{{ asset('icons/youtube.svg') }}" alt="YouTube" class="icon-white me-1" style="width: 40px; height: 40px;">
             </a>
           </div>
           <div class="underline mt-2"></div>
