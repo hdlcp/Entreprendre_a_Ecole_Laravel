@@ -94,9 +94,9 @@
     <!-- Texte superposé -->
     <div class="overlay">
       <div class="text-content">
-        <h1 class="title">GALERIES</h1>
+        <h1 class="title">CONTACTS</h1>
         <p class="event">
-          EXPLOREZ NOS ALBUMS PHOTOS ORGANISES PAR CATEGORIES POUR DECOUVRIR LES EVENEMENTS, PROJETS, ET MOMENTS MARQUANTS QUI ILLUSTRENT NOTRE IMPACT.
+          VOUS AVEZ DES QUESTIONS, DES SUGGESTIONS, OU SOUHAITEZ EN SAVOIR PLUS SUR LE PROGRAMME ENTREPRENDRE A L'ÉCOLE ?
         </p>
       </div>
     </div>
