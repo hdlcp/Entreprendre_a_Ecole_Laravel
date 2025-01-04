@@ -1,0 +1,49 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espace entre les boutons */
+    margin-left: 25px;
+    width: 65%;
+    padding-right: 0px;
+    margin: 70px;
+}
+
+.page-btn, .next-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.page-btn.active {
+    background-color: #0d4293; /* Couleur bleue pour le bouton actif */
+}
+
+.page-btn:hover {
+    background-color: #0d4293; /* Couleur plus claire au survol */
+}
+
+.next-btn {
+    background-color: transparent;
+    color: black;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.next-btn:hover {
+    color: #0d4293; /* Change la couleur de la flèche au survol */
+}
+
+.lien {
+    text-decoration: none; /* Supprime la décoration du lien */
+  color: inherit; /* Garde la couleur d'origine des textes */
+}

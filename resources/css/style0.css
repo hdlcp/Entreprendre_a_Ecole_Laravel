@@ -1,0 +1,85 @@
+.partners-section {
+    width: 100%;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: #fff;
+
+}
+
+.partners-section h1 {
+    font-size: 19px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    color:#0D4293;
+    font-weight: 700;
+}
+.partners-section .under1 {
+width: 90px; /* Largeur de la ligne noire */
+height: 5px;
+background-color: black;
+border-radius: 2px;
+}
+
+
+.carousel1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.carousel1-images {
+    display: flex;
+    overflow: hidden;
+    width: 80%; /* Ajustez selon vos besoins */
+    max-width: 400px;
+}
+
+.carousel1-images img {
+    width: 100px;
+    height: auto;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.prev-btn, .next-btn {
+    margin-right: 50px;
+    margin-left: 50px;
+    background-color: #0D4293;;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #0056b3;
+}
+
+.buttons {
+    margin-top: 20px;
+    margin-left: 65px;
+}
+
+.btn-gallery, .btn-back {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #0D4293;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 30px;
+    margin: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-gallery:hover, .btn-back:hover {
+    background-color: #0056b3;
+}

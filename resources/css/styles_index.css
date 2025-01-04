@@ -1,0 +1,546 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h2, h3 {
+    color: #0046ad;
+}
+
+button {
+    background-color: #0046ad;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003a8f;
+}
+
+
+
+
+/* Section du carrousel */
+.banner-carousel {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Hauteur fixe pour le carrousel */
+    overflow: hidden;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-slide {
+    display: none; /* Cacher les slides par défaut */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-slide.active {
+    display: block; /* Afficher uniquement la slide active */
+  }
+  
+ 
+  /* Contenu du texte de la bannière */
+.banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond sombre semi-transparent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .banner-content h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0 10%; /* Ajout d'un padding pour forcer le texte à prendre plus de lignes */
+  max-width: 80%; /* Limite la largeur du texte pour qu'il s'étale davantage */
+}
+  
+  
+  /* Boutons de contrôle du carrousel */
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  .carousel-control.prev {
+    left: 20px;
+  }
+  
+  .carousel-control.next {
+    right: 20px;
+  }
+  
+  .carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+   
+  
+
+
+/* Section Présentation */
+.presentation-section {
+  background-color: #eef2f7; /* Fond plein sur toute la page */
+  padding: 50px 0;
+  width: 100%;
+}
+
+/* Conteneur principal */
+.presentation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centrage horizontal */
+  gap: 40px;
+}
+
+/* Image de l'étudiante */
+.presentation-image {
+  flex: 1;
+}
+
+.presentation-image img {
+  width: 85%; /* Taille réduite légèrement */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Texte de présentation */
+.presentation-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.presentation-title {
+  font-size: 36px;
+  color: #002060;
+  font-weight: bold; /* Mettre en gras */
+  margin-bottom: 20px;
+}
+
+.presentation-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Boutons */
+.presentation-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Espace entre texte et icône */
+  padding: 10px 20px; /* Taille légèrement réduite */
+  font-size: 14px; /* Texte plus petit */
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 20px; /* Boutons arrondis */
+  background-color: #0056b3; /* Couleur bleu */
+  color: #fff;
+  width: fit-content; /* S'adapte au contenu */
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #004494;
+}
+
+/* Icônes des boutons */
+.btn-icon {
+  width: 16px;
+  height: auto;
+}
+
+
+  
+  
+
+/* SECTION STATISTIQUE PRINCIPALE */
+/* SECTION STATISTIQUE PRINCIPALE */
+.stats-section {
+  padding: 40px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Conteneur principal (gauche et droite) */
+.stats-content {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 100px;
+}
+
+/* Bloc de gauche (image + texte) */
+.stats-left {
+  width: 675px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stats-left .stats-image {
+  width: 70%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.stats-left .stats-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0047ba;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.stats-left .stats-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;
+}
+
+/* Bloc de droite (statistiques) */
+.stats-right {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* Colonnes pour chaque statistique */
+.stats-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+}
+
+/* Chaque icône individuelle */
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Icônes */
+.stat-icon {
+  width: 80px; /* Taille des logos augmentée */
+  height: auto;
+}
+
+/* Texte et numéro alignés à droite du logo */
+.stat-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrer verticalement */
+  justify-content: space-between; /* Également espacé */
+  height: 100px; /* Taille définie pour l'équilibre vertical */
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0047ba;
+  margin: 0;
+}
+
+.stat-text {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0047ba;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsivité */
+@media (max-width: 1024px) {
+  .stats-content {
+      flex-wrap: wrap;
+  }
+
+  .stats-left,
+  .stats-right {
+      width: 100%;
+  }
+
+  .stats-column {
+      gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stat-item {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .stat-info {
+      align-items: center;
+      text-align: center;
+  }
+
+  .stat-icon {
+      width: 60px;
+  }
+}
+
+
+
+
+/*News*/
+
+/* Section globale */
+.news-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Bloc de cartes */
+.news-cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Premier bloc (50%) */
+.news-card.large {
+  flex: 2; /* 50% de l'espace */
+  position: relative;
+}
+
+.news-card.large .news-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Fond sombre */
+  color: #fff;
+  padding: 15px;
+}
+
+.news-card.large .news-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Bloc plus petit (25%) */
+.news-card.small {
+  flex: 1; /* 25% de l'espace */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff; /* Ajout du fond blanc */
+  border-radius: 0px; /* Coins arrondis */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour donner un effet surélevé */
+  overflow: hidden; /* Assure que tout reste dans les limites du conteneur */
+  padding: 15px; /* Ajoute un espacement interne */
+}
+
+/* Style pour le texte "Lancement d’AppDev229" du premier bloc */
+.news-card.large .news-title {
+  color: #fff; /* Texte en blanc */
+  font-size: 18px; /* Taille adaptée */
+  font-weight: bold; /* Gras */
+  margin-bottom: 5px;
+}
+
+/* Texte des deux autres blocs */
+.news-card.small .news-title {
+  color: #0047ba; /* Bleu */
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Bouton "Lire plus" */
+.news-button {
+  background-color: #0047ba;
+  color: #fff;
+  padding: 5px 10px; /* Réduction de la taille */
+  border-radius: 20px; /* Bord plus arrondi */
+  font-size: 12px; /* Texte légèrement plus petit */
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content; /* Ajuste la largeur automatiquement au contenu */
+}
+
+.news-icon-eye {
+  width: 14px;
+  height: 14px;
+}
+
+/* Icône calendrier */
+.news-icon-calendar {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+}
+
+/* Espacement entre date et bouton pour les petits blocs */
+.news-card.small .news-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alignement à gauche */
+  gap: 8px; /* Ajoute un espacement entre la date et le bouton */
+}
+
+.news-footter .news-date {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold; /* Date en gras */
+}
+
+/* Images */
+.news-card .news-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* Coins arrondis pour les images */
+}
+
+/* Global styling adjustments */
+.news-section .news-cards {
+  display: flex;
+  gap: 20px;
+}
+
+
+
+/* Section Partenaires */
+.partners-section {
+  width: 100vw; /* Occupe toute la largeur de la fenêtre */
+  margin: 0; /* Supprime la marge par défaut */
+  padding: 25px;
+  background-color: #fff;
+  box-sizing: border-box; /* Pour inclure le padding dans la largeur totale */
+}
+
+.partners-section h1 {
+  font-size: 19px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  color: #0D4293;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.partners-section .under1 {
+  width: 90px; /* Largeur de la ligne noire */
+  height: 5px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.carousel1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.carousel1-images {
+  display: grid; /* Utilisation de la grille pour un espacement uniforme */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Les images occuperont un minimum de 200px et se répartiront en fonction de l'espace */
+  gap: 20px; /* Espacement entre les images */
+  width: 100%; /* Occupe toute la largeur */
+  justify-content: center; /* Centre les éléments */
+  align-items: center;
+}
+
+.carousel1-images img {
+  width: 100%; /* Chaque image occupe tout l'espace de sa colonne */
+  height: 200px; /* Taille fixe pour que toutes les images aient la même hauteur */
+  object-fit: cover; /* Maintient les proportions de l'image tout en remplissant l'espace */
+  transition: transform 0.3s ease-in-out;
+}
+
+.prev-btn, .next-btn {
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: #0D4293;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  width: 50px; 
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: #0056b3;
+}
