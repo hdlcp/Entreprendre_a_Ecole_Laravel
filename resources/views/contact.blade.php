@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSTI</title>
+    <title>Contacts</title>
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style_000.css') }}" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -94,9 +94,9 @@
     <!-- Texte superposé -->
     <div class="overlay">
       <div class="text-content">
-        <h1 class="title">GALERIES</h1>
+        <h1 class="title">CONTACTS</h1>
         <p class="event">
-          EXPLOREZ NOS ALBUMS PHOTOS ORGANISES PAR CATEGORIES POUR DECOUVRIR LES EVENEMENTS, PROJETS, ET MOMENTS MARQUANTS QUI ILLUSTRENT NOTRE IMPACT.
+          VOUS AVEZ DES QUESTIONS, DES SUGGESTIONS, OU SOUHAITEZ EN SAVOIR PLUS SUR LE PROGRAMME ENTREPRENDRE A L'ÉCOLE ?
         </p>
       </div>
     </div>
