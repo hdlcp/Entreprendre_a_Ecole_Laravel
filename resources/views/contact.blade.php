@@ -4,11 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>contacts</title>
-=======
-    <title>Contacts</title>
->>>>>>> be4a9121957e2de9fadeff5f872717d0600a3a81
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style_000.css') }}" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -147,6 +143,23 @@
  
 <!-- JavaScript Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Sélectionne tous les liens de navigation
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  // Applique la classe active en fonction de l'URL actuelle
+  navLinks.forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add('active');
+    }
+
+    // Gère le clic pour ajouter la classe active
+    link.addEventListener('click', () => {
+      navLinks.forEach(l => l.classList.remove('active')); // Supprime les classes actives
+      link.classList.add('active'); // Applique la classe active au lien cliqué
+    });
+  });
+</script>
 </body>
 
 <footer class="py-4">

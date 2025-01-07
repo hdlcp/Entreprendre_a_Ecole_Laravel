@@ -100,14 +100,14 @@
     </div>
     <!-- Slide 2 -->
     <div class="carousel-slide">
-      <img src="{{ asset('images/banner2.jpeg') }}" alt="Banner 2">
+      <img src="{{ asset('images/image_duosale2.jpeg') }}" alt="Banner 2">
       <div class="banner-content">
         <h1>Une éducation axée sur l'innovation.</h1>
       </div>
     </div>
     <!-- Slide 3 -->
     <div class="carousel-slide">
-      <img src="{{ asset('images/banner3.jpeg') }}" alt="Banner 3">
+      <img src="{{ asset('images/banner2.jpeg') }}" alt="Banner 3">
       <div class="banner-content">
         <h1>Rejoignez-nous pour transformer des idées en réalité.</h1>
       </div>
@@ -227,24 +227,25 @@
       <div class="news-cards">
           <!-- Premier bloc (50%) -->
           <div class="news-card large">
-              <img src="{{ asset('images/news1.png') }}" alt="Lancement d'AppDev229" class="news-image">
-              <div class="news-overlay">
-                  <div class="news-content">
-                      <h3 class="news-title">Lancement d’AppDev229</h3>
-                      <p class="news-description">Une startup spécialisée en développement d’applications.</p>
-                      <div class="news-footer">
-                          <span class="news-date">
-                              <img src="{{ asset('images/calendar-icon1.svg') }}" alt="Calendar icon" class="news-icon-calendar">
-                              <strong>17 Mars 2022</strong>
-                          </span>
-                          <a href="{{ route('annonces_plus') }}" class="news-button">
-                              Lire plus
-                              <img src="{{ asset('images/eye-icon.svg') }}" alt="Eye icon" class="news-icon-eye">
-                          </a>
-                      </div>
-                  </div>
-              </div>
-          </div>
+            <img src="{{ asset('images/image_duosale2.jpeg') }}" alt="Lancement d'AppDev229" class="news-image">
+            <div class="news-overlay">
+                <div class="news-content">
+                    <h3 class="news-title">Lancement de l'entreprise DUOS SALES</h3>
+                    <p class="news-description">Une startup spécialisée dans la formation des jeunes écoliers et élèves à l'utilisation de l'électronique.</p>
+                    <div class="news-footer">
+                        <span class="news-date">
+                            <img src="{{ asset('images/calendar-icon1.svg') }}" alt="Calendar icon"
+                                class="news-icon-calendar">
+                            <strong>22 juillet 2024</strong>
+                        </span>
+                        <a href="{{ route('annonces_plus') }}" class="news-button">
+                            Lire plus
+                            <img src="{{ asset('images/eye-icon.svg') }}" alt="Eye icon" class="news-icon-eye">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
           <!-- Deuxième bloc (25%) -->
           <div class="news-card small">
@@ -299,12 +300,29 @@
             <img src="{{ asset('images/UNSTIM.png') }}" alt="UNSTIM">
             <img src="{{ asset('images/SONEB.png') }}" alt="SONEB">
             <img src="{{ asset('images/GEL.png') }}" alt="Guichet d'Économie Locale">
+            <img src="{{ asset('images/snv.jpeg') }}" alt="">
           </div>
           <button class="next-btn">❯</button>
       </div>
   </div>
   
-
+  <script>
+    // Sélectionne tous les liens de navigation
+    const navLinks = document.querySelectorAll('.nav-link');
+  
+    // Applique la classe active en fonction de l'URL actuelle
+    navLinks.forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      }
+  
+      // Gère le clic pour ajouter la classe active
+      link.addEventListener('click', () => {
+        navLinks.forEach(l => l.classList.remove('active')); // Supprime les classes actives
+        link.classList.add('active'); // Applique la classe active au lien cliqué
+      });
+    });
+  </script>
 
   <footer class="py-4">
     <div class="container">

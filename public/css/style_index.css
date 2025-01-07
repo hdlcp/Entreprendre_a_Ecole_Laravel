@@ -1,3 +1,16 @@
+.custom-navbar {
+  position: sticky; /* Rend la barre collante */
+  top: 0; /* Colle la barre tout en haut */
+  z-index: 1000; /* Assure que la barre est toujours visible au-dessus des autres éléments */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre */
+}
+
+
+
+
+
+
+
 header {
   height: 73px;
   /* Hauteur uniforme pour tout le header */
@@ -94,29 +107,49 @@ header {
   /* Enlève l'espacement vertical supplémentaire */
 }
 
-/* Style des liens de navigation */
+/* Style de base pour les liens */
+
 .nav-item .nav-link {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 15.85px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: #0D4293;
-  padding: 15px 20px;
-  /* Ajuste l'espacement autour des liens */
-  transition: color 0.3s ease;
-  display: flex;
-  align-items: center;
-  /* Alignement vertical */
-  height: 80px;
-  /* Définit la hauteur pour s'aligner avec le logo */
+  font-family: 'Montserrat', sans-serif; /* Police du texte */
+  font-size: 13px; /* Taille de la police */
+  font-weight: 700; /* Gras */
+  line-height: 15.85px; /* Hauteur de ligne */
+  color: #0D4293; /* Couleur du texte par défaut */
+  position: relative; /* Nécessaire pour le soulignement */
+  text-decoration: none; /* Supprime les soulignements par défaut */
+  padding: 5px 10px; /* Ajuste les marges autour du texte */
+  transition: color 0.3s ease; /* Transition fluide pour la couleur */
 }
 
 .nav-item .nav-link:hover {
   color: #0056b3;
 }
+
+/* Effet de soulignement */
+.nav-item .nav-link.active::after,
+.nav-item .nav-link:hover::after {
+  content: ""; /* Pseudo-élément pour la ligne */
+  position: absolute;
+  bottom: -2px; /* Place la ligne juste en dessous du texte */
+  left: 0; /* Ligne commence à gauche du texte */
+  width: 100%; /* Ligne suit la largeur du texte */
+  height: 2px; /* Épaisseur de la ligne */
+  background-color: #0056b3; /* Couleur de la ligne */
+  transition: width 0.3s ease-in-out; /* Animation fluide */
+}
+
+
+/* Ligne invisible par défaut */
+.nav-item .nav-link::after {
+  width: 0;
+}
+
+/* Ligne visible au survol ou actif */
+.nav-item .nav-link:hover::after,
+.nav-item .nav-link.active::after {
+  width: 100%; /* Ligne complète sous le texte */
+}
+
 
 /* Logo central */
 .logo-container {

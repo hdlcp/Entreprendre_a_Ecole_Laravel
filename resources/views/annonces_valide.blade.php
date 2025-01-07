@@ -105,15 +105,13 @@
 
 <div class="container00">
     <div class="main-content">
-        <img src="{{ asset('images/DSC_0196 1.png') }}" alt="Lancement AppDev229" class="event-image">
-        <div class="content" style="margin-bottom: 55px;">
-            <p class="event-date title" style="font-size: 17px; color:#0D4293;"><img src="icons/Vector (1).png" alt="galerie">   17 Mars 2022</p>
-            <h1 class="title" style="font-size: 1.4rem;">Lancement d'AppDev229</h1>
-            <p>AppDev229, une startup prometteuse créée dans le cadre du programme Entreprendre à l'École, 
-                se spécialise dans le développement d’applications pratiques pour les entreprises locales. 
-                Son lancement marque un pas vers l’innovation et la transformation numérique au Bénin.</p>
-                <button class="read-more"><a href="{{ route('annonces_plus') }}" class="lien"><strong>Lire plus </strong></a><img src="{{ asset('icons/weui_eyes-on-filled.png') }}" alt="lire+"></button>
-        </div>
+      <img src="{{ asset('images/image_duosale2.jpeg') }}" alt="Lancement AppDev229" class="event-image">
+      <div class="content" style="margin-bottom: 55px;">
+          <p class="event-date title" style="font-size: 17px; color:#0D4293;"><img src="icons/Vector (1).png" alt="galerie">   22 juillet 2024</p>
+          <h1 class="title" style="font-size: 1.4rem;">Lancement de l'entreprise DUOS SALES</h1>
+          <p>DUOS SALES est une organisation visionnaire créée pour initier les jeunes écoliers et élèves aux bases de l'électronique, ouvrant ainsi la voie à une meilleure compréhension des technologies modernes.</p>
+              <button class="read-more"><a href="{{ route('annonces_plus') }}" class="lien"><strong>Lire plus </strong></a><img src="{{ asset('icons/weui_eyes-on-filled.png') }}" alt="lire+"></button>
+      </div>
         <img src="{{ asset('images/DSC_0196 1.png') }}" alt="Lancement AppDev229" class="event-image">
         <div class="content" style="margin-bottom: 55px;">
             <p class="event-date title" style="font-size: 17px; color:#0D4293;"><img src="icons/Vector (1).png" alt="galerie">   17 Mars 2022</p>
@@ -179,6 +177,23 @@
 </div>
 <!-- JavaScript Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Sélectionne tous les liens de navigation
+    const navLinks = document.querySelectorAll('.nav-link');
+  
+    // Applique la classe active en fonction de l'URL actuelle
+    navLinks.forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      }
+  
+      // Gère le clic pour ajouter la classe active
+      link.addEventListener('click', () => {
+        navLinks.forEach(l => l.classList.remove('active')); // Supprime les classes actives
+        link.classList.add('active'); // Applique la classe active au lien cliqué
+      });
+    });
+  </script>
 </body>
 
 <footer class="py-4">

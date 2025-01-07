@@ -98,7 +98,7 @@
             <div class="carousel_title">
                 <h1>ENTREPRISES CRÉÉES</h1>
                 <p class="subtitle">LES ENTREPRISES INNOVANTES NÉES GRACE AU PROGRAMME ENTREPRENDRE A L’ÉCOLE</p>
-                <p class="event">EduTech Solutions</p>
+                <p class="event">DUOS SALES</p>
             </div>
         </div>
         <div class="header-image">
@@ -107,48 +107,43 @@
     </section>
     <div class="container00">
         <div class="main-content">
-            <img src="{{ asset('images/img_actu.png') }}" alt="Lancement AppDev229" class="event-image">
+            <img src="images/image_duosale2.jpeg" alt="Lancement AppDev229" class="event-image">
             <div class="content">
-                <p class="event-date title" style="font-size: 17px; color:#0D4293;"><img src="icons/Vector (1).png" alt="galerie">    Créée le 20 mars 2020</p>
-                <h1 class="title" style="font-size: 1.4rem;margin-top: 30px;">EduTech Solutions</h1>
+                <p class="event-date title" style="font-size: 17px; color:#0D4293;"><img src="icons/Vector (1).png" alt="galerie">    Créée le 22 juillet 2024</p>
+                <h1 class="title" style="font-size: 1.4rem;margin-top: 30px;">DUOS SALES</h1>
                 <h2 class="title" style="font-size: 1rem; margin-top: 30px;margin-bottom: 30px;">Domaine d’Activité :
-                    Éducation numérique.</h2>
+                    Initiation à l'électronique.</h2>
                 <h2 class="title" style="font-size: 1rem; color:#0D4293;margin-bottom: 10px">Description Détaillée :
                 </h2>
-                <p>EduTech Solutions est une startup innovante qui se
-                    consacre à la transformation numérique du secteur éducatif. L’entreprise
-                    conçoit des plateformes interactives et des outils numériques pour améliorer l'accès à
-                    l'éducation et rendre l'apprentissage plus dynamique et engageant.</p>
+                <p>DUOS SALES est une startup innovante qui se consacre à l'initiation
+                     des jeunes écoliers et élèves à l'utilisation basique de l'électronique. 
+                     L'entreprise vise à briser la barrière de l'ignorance dans le domaine de
+                     la mécatronique en éveillant les capacités d'innovation des jeunes, afin de les préparer
+                       à devenir des acteurs clés dans l'évolution technologique future.</p>
 
                 <h2 class="title" style="font-size: 1rem; color:#0D4293;margin-top: 30px;">Mission :</h2>
 
-                <p>Favoriser l'éducation pour tous grâce
-                    à des solutions technologiques innovantes, adaptées aux
-                    besoins des élèves, enseignants, et institutions.</p>
+                <p> Initier les jeunes écoliers et élèves à l'utilisation basique de l'électronique. </p>
 
                 <h2 class="title" style="font-size: 1rem; color:#0D4293;margin-top: 30px;">Vision :</h2>
 
-                <p>Devenir un acteur clé de l’éducation numérique en Afrique,
-                    en mettant l’accent sur l’innovation,
-                    l’accessibilité et l’impact social.</p>
+                <p>Briser la barrière qu'est l'ignorance des jeunes dans le domaine de la mécatronique 
+                    et réveiller leurs capacités à innover dans ce domaine.</p>
                 <h2 class="title" style="font-size: 1rem; color:#0D4293;margin-top: 30px;">Fondateur :</h2>
                 <ul class="founders-list">
-                    <li>Claire HOUNZANDJI : Ingénieure pédagogique et passionnée d’innovation éducative.</li><br>
+                    <li>Bertille MEDEGNON : Étudiante en L3 de Génie Mécanique et Productique.</li><br>
 
-                    <li>Yannick AGOSSADOU : Développeur logiciel spécialisé en applications éducatives.</li>
+                    <li> Rosine YAOITCHA : Étudiante en L3 de Génie Électrique et Informatique.</li>
                 </ul>
 
                 <h2 class="title" style="font-size: 1rem; color:#0D4293;margin-top: 30px;">Projets Réalisés ou Produits
                     :</h2>
 
-                <p>EduTech Solutions a développé plusieurs produits pour répondre aux défis actuels de l'éducation :</p>
+                <p>DUOS SALES a développé plusieurs produits pour répondre aux défis actuels de l'éducation :</p>
                 <ol class="founders-list">
-                    <li>SmartClass : Une plateforme de gestion de classes en ligne permettant aux enseignants de
-                        planifier, évaluer et interagir avec leurs élèves de manière fluide.</li><br>
-                    <li>QuizMaster : Une application mobile pour organiser des quiz interactifs, idéale pour les
-                        révisions et évaluations.</li><br>
-                    <li>EduHub : Une bibliothèque numérique rassemblant des ressources pédagogiques accessibles en ligne
-                        ou hors ligne.</li>
+                    <li>L'ÉLECTRONIQUE À LA PORTÉE DE TOUS (EPT): c'est une formation dédiée aux écoliers et élèves 
+                        de la classe du CM1 en 4ème, organisée du 26 au 31 août 2024 dans les locaux de l'INSTI .</li><br>
+                    
                 </ol>
 
             </div>
@@ -206,8 +201,8 @@
             <button class="prev-btn">❮</button>
             <div class="carousel-images">
                 <img src="icons/images-removebg-preview (3).png" alt="UNSTIM">
-                <img src="icons/image-removebg-preview.png" alt="SONEB">
-                <img src="icons/p8.png" alt="Guichet d'Économie Locale">
+                <img src="images/justice.png" alt="SONEB">
+                <img src="images/snv.jpeg" alt="Guichet d'Économie Locale">
             </div>
             <button class="next-btn">❯</button>
         </div>
@@ -242,6 +237,23 @@
     </div>
     <!-- JavaScript Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sélectionne tous les liens de navigation
+        const navLinks = document.querySelectorAll('.nav-link');
+      
+        // Applique la classe active en fonction de l'URL actuelle
+        navLinks.forEach(link => {
+          if (link.href === window.location.href) {
+            link.classList.add('active');
+          }
+      
+          // Gère le clic pour ajouter la classe active
+          link.addEventListener('click', () => {
+            navLinks.forEach(l => l.classList.remove('active')); // Supprime les classes actives
+            link.classList.add('active'); // Applique la classe active au lien cliqué
+          });
+        });
+      </script>
 </body>
 
 <footer class="py-4">
